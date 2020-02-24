@@ -1,0 +1,15 @@
+<section class="configuration container">
+	<div class="configuration__wrapper">
+		<h2>Доступные конфигурации</h2>
+		<div class="configuration__paginator">
+		
+      <app-filter (onChange)="params = $event"></app-filter>
+			<ul *ngIf="data" class="product">
+        
+				<p *ngIf="filtered(data).length; else nodata">Доступны следующие конфигурации:</p>
+        <ng-template #nodata><p>Оборудования с такими параметрами нет</p></ng-template>
+        <app-prod-item *ngFor="let item of filtered(data)" [info]="item"></app-prod-item>
+			</ul>
+		</div>
+	</div>
+</section>

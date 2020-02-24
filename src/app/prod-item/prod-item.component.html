@@ -1,0 +1,21 @@
+<li class="product__list">
+	<div class="product__first">
+		<h3>{{info.name}}</h3>
+		<div>
+		  <p>{{info.cpu.name}}</p>	
+			<span>{{info.cpu.cores * info.cpu.count}} ядер(а)</span>
+		</div>
+	</div>
+	<div class="product__second">
+		<span>{{info.ram}}</span>
+		<div class="product__ram">
+			<span>{{info.disk.value}} Гб</span>
+			<span>{{info.disk.type}}</span>
+		</div>
+		<span>{{info.gpu ? info.gpu : ''}}</span>
+	</div>
+	<div class="product__right">
+		<h3>{{info.price / 100}} ₽/месяц</h3>
+		<button class="product__button button">Заказать</button>
+	</div>
+</li>

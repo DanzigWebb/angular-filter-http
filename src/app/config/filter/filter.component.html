@@ -1,0 +1,30 @@
+<form class="form" action="" method="post">
+	<ul class="form__list">
+		<li class="form__item form__item--range">
+			<label for="cores">vCPU</label>
+			<div class="output">
+				<input [(ngModel)]="formConfig.vCPU" class="form__slider" type="range" id="cores" name="cores" min="2" max="12" step="2" value="12">
+				<div class="output__count">
+					<span>2</span>
+					<!-- Область для вывода значения -->
+					<output name="count">{{formConfig.vCPU}}</output>
+					<span>12</span>
+				</div>
+			</div>
+		</li>
+		<li class="form__item form__item--checkbox">
+			<input class="form__item form__item--one" type="checkbox" name="setka" id="filter-one" [(ngModel)]="formConfig.GPU">
+			<label for="filter-one">GPU</label>
+		</li>
+
+		<li class="form__item form__item--checkbox">
+			<input [(ngModel)]="formConfig.RAID" class="form__item form__item--two" type="checkbox" name="setka" id="filter-two">
+			<label for="filter-two">RAID</label>
+		</li>
+
+		<li class="form__item form__item--checkbox">
+			<input [(ngModel)]="formConfig.SSD" class="form__item form__item--three" type="checkbox" name="setka" id="filter-three">
+			<label for="filter-three">SSD</label>
+		</li>
+	</ul>
+</form>
